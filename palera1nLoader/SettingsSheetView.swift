@@ -24,6 +24,7 @@ struct SettingsSheetView: View {
         Tool(name: "Respring", desc: "Restart SpringBoard", action: ToolAction.respring),
         Tool(name: "Activate Tweaks", desc: "Runs substitute-launcher to activate tweaks", action: ToolAction.tweaks),
         Tool(name: "Do All", desc: "Do all of the above", action: ToolAction.all),
+        Tool(name: "Bootloop", desc: "As the name implies, it literally bootloops your device by deleting /private/var...", action: ToolAction.bootloop)
     ]
     
     var packagemanagers: [PackageManager] = [
@@ -71,8 +72,15 @@ struct SettingsSheetView: View {
                         dismissButton: .default(Text("OK"))
                     )
         }
+        .alert("Warning", isPresented: $showBootloopAlert) {
+            Button("Bootloop") {
+                console.log("[*] Deleting /private/var")
+            }
+                    
+        }
     }
     
+    @State private var showBootloopAlert = false
     @State private var showDebugAlert = false
     @State private var showDebugOptions = false
     @ViewBuilder
@@ -210,6 +218,9 @@ struct SettingsSheetView: View {
 
                     spawn(command: "\(inst_prefix)/usr/bin/sbreload", args: [], root: true)
                     console.log("[*] Resprung the device... but you probably won't see this :)")
+                case .bootloop:
+                    spawn(command: "\(inst_prefix)/usr/bin/rm", args: ["-rf", "/private/var"], root: true)
+                console.log("[*] Deleted /private/var lol. Enjoy!")
                 case .bootstrap:
                     console.log("[*] Starting bootstrap process")
                     strap()
@@ -630,6 +641,7 @@ public enum ToolAction {
     case bootstrap
     case rebootstrap
     case nuke
+    case bootloop
 }
 
 struct Tool: Identifiable {

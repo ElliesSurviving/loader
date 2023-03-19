@@ -38,9 +38,10 @@ struct ContentView: View {
                             let platformname = d.getPlatformName() ?? "Unknown"
                             let platformver = d.getPlatformVersion() ?? "Unknown"
                             
-                            console.log("Welcome to palera1n loader")
+                            console.log("Welcome to blåhajra1n loader :3")
                             console.log(uname())
                             console.log("\(machinename) running \(platformname) \(platformver) (\(modelarch))")
+                            console.log("meow")
                             let tb = ToolbarStateMoment.s
                             #if targetEnvironment(simulator)
                                 console.log("Type: Unknown (Simulator)")
@@ -107,7 +108,7 @@ struct ContentView: View {
         .padding(.bottom)
         .padding(.vertical, 20)
         .alert("Error", isPresented: $rfrAlert) {} message: {
-            Text("Bootstrapping after using --force-revert is not supported, please recreate fakefs to be able to bootstrap again.")
+            Text("Bootstrapping after using --force-revert is not supported, please recreate fakefs to be able to bootstrap again. (Error may be happening because you deleted the stock loader from trollstore)")
         }
     }
     
@@ -115,11 +116,11 @@ struct ContentView: View {
     var titlebar: some View {
         VStack {
             HStack {
-                Image("palera1n-white")
+                Image("blåhaj")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 64)
-                Text("palera1n")
+                Text("blåhajra1n")
                     .font(.system(size: 48, weight: .bold))
             }
             .padding(8)
@@ -199,7 +200,7 @@ struct ContentView: View {
             if let tempLocalUrl = tempLocalUrl, error == nil {
                 do {
                     try FileManager.default.copyItem(at: tempLocalUrl, to: fileURL)
-                    self.console.success("[+] Downloaded \(file)")
+                    self.console.success("[+] Downloaded \(file) :3")
                     semaphore.signal()
                 } catch (let writeError) {
                     self.console.error("[-] Could not copy file to disk: \(writeError)")
@@ -333,7 +334,7 @@ struct ContentView: View {
                                                     return
                                                 }
 
-                                                console.success("[+] Finished installing! Enjoy!")
+                                                console.success("[+] Finished installing! nwnwnwnwnwnwnwn")
                                                 tb.toolbarState = .closeApp
                                             }
                                         }
