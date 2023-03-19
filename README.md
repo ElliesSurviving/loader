@@ -1,4 +1,6 @@
-# palera1n loader
+# blåhajra1n loader
+
+This is an extremely modified palera1n loader where blåhaj is god.
 
 This is the loader application that gets installed to your device after jailbreaking which lets you bootstrap the device among other things.
 
