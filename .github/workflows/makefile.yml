@@ -19,3 +19,10 @@ jobs:
           sudo install -m755 ldid_macosx_x86_64 /usr/local/bin/ldid
       - name: Compile
         run: make
+        
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: palera1n
+          path: packages/
+        
