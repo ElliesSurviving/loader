@@ -30,6 +30,9 @@ struct CreditsSheetView: View {
         Person(name: "xerub", icon: URL(string: "https://avatars.githubusercontent.com/u/12567734?v=4")!, role: "img4lib & restored_external", link: URL(string: "https://github.com/xerub")!),
         Person(name: "alexia", icon: URL(string: "https://avatars.githubusercontent.com/u/482367?v=4")!, role: "DFU script", link: URL(string: "https://github.com/0xallie")!),
         Person(name: "Cryptic", icon: URL(string: "https://avatars.githubusercontent.com/u/27748705?v=4")!, role: "iBoot64Patcher fork", link: URL(string: "https://github.com/Cryptiiiic")!),
+        Person(name: "furtsu", icon: URL(string: "https://cdn.discordapp.com/avatars/568060407248453632/4939f4d534f3d013a04d5fcab4448e58.png?size=4096")!, role: "emotional support", link: URL(string: "https://cdn.discordapp.com/avatars/568060407248453632/4939f4d534f3d013a04d5fcab4448e58.png?size=4096")!),
+        Person(name: "Snoolie", icon: URL(string:"https://cdn.discordapp.com/avatars/1043294320729542706/d62041bf34ab5aa416d374b5013c3bba.png?size=4096")!, role: "openpwnage dev", link: URL(string: "https://github.com/0xilis")!),
+        Person(name: "Worf", icon: URL(string: "https://cdn.discordapp.com/avatars/1030650963427594302/9b0366f566c8eeef061f952c15f9ae03.png?size=4096")!, role:"totally programmed everything", link: URL(string: "https://worf.win")!),
     ]
     
     var body: some View {
