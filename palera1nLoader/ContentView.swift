@@ -39,6 +39,7 @@ struct ContentView: View {
                             let platformver = d.getPlatformVersion() ?? "Unknown"
                             
                             console.log("Welcome to blåhajra1n loader :3")
+                            console.log("https://github.com/afastaudir8/loader")
                             console.log(uname())
                             console.log("\(machinename) running \(platformname) \(platformver) (\(modelarch))")
                             console.log("meow")
