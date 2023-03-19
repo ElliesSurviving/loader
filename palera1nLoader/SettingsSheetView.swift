@@ -71,16 +71,10 @@ struct SettingsSheetView: View {
                         message: Text("Currently showing debug options (note: these will disappear when you exit tools)."),
                         dismissButton: .default(Text("OK"))
                     )
-        }
-        .alert("Warning", isPresented: $showBootloopAlert) {
-            Button("Bootloop") {
-                console.log("[*] Deleting /private/var")
-            }
                     
         }
     }
     
-    @State private var showBootloopAlert = false
     @State private var showDebugAlert = false
     @State private var showDebugOptions = false
     @ViewBuilder
