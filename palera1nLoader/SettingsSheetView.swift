@@ -24,7 +24,7 @@ struct SettingsSheetView: View {
         Tool(name: "Respring", desc: "Restart SpringBoard", action: ToolAction.respring),
         Tool(name: "Activate Tweaks", desc: "Runs substitute-launcher to activate tweaks", action: ToolAction.tweaks),
         Tool(name: "Do All", desc: "Do all of the above", action: ToolAction.all),
-        Tool(name: "Bootloop", desc: "As the name implies, it literally bootloops your device by deleting /private/var...", action: ToolAction.bootloop)
+  //      Tool(name: "Bootloop", desc: "As the name implies, it literally bootloops your device by deleting /private/var...", action: ToolAction.bootloop)
     ]
     
     var packagemanagers: [PackageManager] = [
